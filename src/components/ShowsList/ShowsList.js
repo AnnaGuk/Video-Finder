@@ -1,6 +1,18 @@
 import React, { Component } from "react";
+import styled from "styled-components";
 import Show from "../Show/Show";
 import Search from "../Search/Search";
+
+const Header = styled.header`
+  display: flex;
+  align-items: center;
+`;
+
+const Image = styled.img`
+  height: 2rem;
+  margin: 0.2rem;
+  padding: 0.3125rem;
+`;
 
 class ShowsList extends Component {
   state = {
@@ -18,14 +30,14 @@ class ShowsList extends Component {
   render() {
     return (
       <>
-        <header>
-          Logo
+        <Header>
+          <Image src="/img/iconfinder.svg" alt="Logo" />
           <Search
             handleEvent={this.handleSearchInput}
             handleClick={this.handleSearchClick}
             value={this.state.value}
           />
-        </header>
+        </Header>
         <section>
           {this.props.shows
             .filter(show =>

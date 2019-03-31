@@ -1,10 +1,11 @@
 .App {
   text-align: center;
+  font-size: 16px;
 }
 
 .intro-box {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  margin: 3,125rem;
 }
